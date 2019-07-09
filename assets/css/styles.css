@@ -1,0 +1,276 @@
+body{ font: 14px sans-serif; text-align: center; }
+.mostrarParticipantes{display:none; margin-top:3%;}
+.mostrarParticipantesFiltrados{display:none; margin-top:3%;}
+.mostrar{display:inline-block!important;}
+.divCheckboxes{display:inline-block;}
+.checkboxes{display:inline-block;}
+.ocultar{display:none!important;}
+.selectSedes{text-align: right; display:none;}
+.selectApellido{display:none;}
+.selectCiudad{display:none;}
+.selectSexo{display:none;}
+.selectConoCircuito{display:none;}
+.selectRol{display:none;}
+.selectPolitica{display:none;}
+.selectNotificaciones{display:none;}
+.selectConfirmado{display:none;}
+.marginTopSelección{margin-top:10px;}
+.mostrExportar2{display:none;}
+.panel1{background-color: #337ab7 !important; font-size: 16px; text-transform: uppercase; font-weight: 600; font-family: monospace; color:white !important;}
+.panel2{background-color: #5bc0de !important; font-size: 16px; text-transform: uppercase; font-weight: 600;font-family: monospace; color:white !important;}
+.divDescargar{display:none};
+
+/*Bootstrap button outline override*/
+.btn-outline {background-color: transparent; color: inherit; transition: all .5s;}
+.btn-primary.btn-outline {color: #428bca;}
+.btn-success.btn-outline {color: #5cb85c;}
+.btn-info.btn-outline {color: #5bc0de;}
+.btn-warning.btn-outline {color: #f0ad4e;}
+.btn-danger.btn-outline {color: #d9534f;}
+.btn-primary.btn-outline:hover,
+.btn-success.btn-outline:hover,
+.btn-info.btn-outline:hover,
+.btn-warning.btn-outline:hover,
+.btn-danger.btn-outline:hover {	color: #fff;}
+.btn-outline-light { color: #f8f9fa; background-color: transparent; background-image: none; border-color: #f8f9fa;}
+.btn-outline-light:hover { color: #f8f9fa; background-color: #f8f9fa; background-image: none; border-color: #f8f9fa;}
+
+.btn-secondary {
+    color: #fff !important;
+ /* background-color: #6c757d!important; */
+    background-color: #a9b3bb!important;
+    border-color: #6c757d!important;
+}
+
+.btn-secondary:hover {
+    color: #fff!important;
+    background-color: #5a6268!important;
+    border-color: #545b62!important;
+}
+
+.btn-secondary:focus, .btn-secondary.focus {
+    box-shadow: 0 0 0 0.2rem rgba(130, 138, 145, 0.5)!important;
+}
+
+.btn-secondary.disabled, .btn-secondary:disabled {
+    color: #fff!important;
+    background-color: #6c757d!important;
+    border-color: #6c757d!important;
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active,
+.show > .btn-secondary.dropdown-toggle {
+    color: #fff!important;
+    background-color: #545b62!important;
+    border-color: #4e555b!important;
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-secondary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(130, 138, 145, 0.5)!important;
+}
+
+
+@media only screen and (min-width:600px) {
+    .mostrExportar1{margin-top:5%;margin-bottom: 1%;}
+    .mostrExportar2{margin-top:5%;margin-bottom: 1%;}
+    .enviarDatos{margin-bottom: 1.5%;margin-right:1%;}
+}
+
+@media only screen and (min-width:600px) and (max-width:1400px){
+    .botonParticipantes{margin-left: 27%; margin-right: 1%;}
+    .exportarTodo1{float:right; margin:0; margin-right: 2%;}
+}
+
+@media only screen and (min-width:1400px) {
+    .botonParticipantes{margin-left: 34%; margin-right: 1%;}
+}
+
+@media only screen and (max-width:600px){
+    .botonParticipantes{margin-right: 1%;}
+    .mostrExportar1{margin-top:5%;margin-bottom: 5%;}
+    .mostrExportar2{margin-top:5%;margin-bottom: 5%;}
+    .exportarTodo1{margin-bottom:5%; margin-right: 3%;}
+    .enviarDatos{margin-bottom: 5%;margin-right:3%;}
+}
+    /* Checkboxes Estilos */
+
+    /* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+position: absolute;
+left: -9999px;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+position: relative;
+padding-left: 1.95em;
+cursor: pointer;
+}
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+content: '';
+position: absolute;
+left: 0; top: 0;
+width: 1.25em; height: 1.25em;
+border: 2px solid #ccc;
+background: #fff;
+border-radius: 4px;
+box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+}
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+content: '\2713\0020';
+position: absolute;
+top: .15em; left: .22em;
+font-size: 1.3em;
+line-height: 0.8;
+color: #09ad7e;
+transition: all .2s;
+font-family: 'Lucida Sans Unicode', 'Arial Unicode MS', Arial;
+}
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+opacity: 0;
+transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+opacity: 1;
+transform: scale(1);
+}
+/* disabled checkbox */
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before {
+box-shadow: none;
+border-color: #bbb;
+background-color: #ddd;
+}
+[type="checkbox"]:disabled:checked + label:after {
+color: #999;
+}
+[type="checkbox"]:disabled + label {
+color: #aaa; 
+}
+/* accessibility */
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+border: 2px outset blue;
+}
+
+/* hover style just for information */
+ label:hover:before {
+border: 2px solid #4778d9!important;
+} 
+
+/* Font text Checkboxes */
+
+ .styleChecks {
+font-family: "Open sans", "Segoe UI", "Segoe WP", Helvetica, Arial, sans-serif;
+color: #777;
+} 
+/* Estilo type 2 */
+    /* 
+                [type="checkbox"]:checked,
+        [type="checkbox"]:not(:checked) {
+            position: absolute;
+            left: -9999px;
+        }
+        [type="checkbox"]:checked + label,
+        [type="checkbox"]:not(:checked) + label
+        {
+            position: relative;
+            padding-left: 28px;
+            cursor: pointer;
+            line-height: 20px;
+            display: inline-block;
+            color: #666;
+        }
+        [type="checkbox"]:checked + label:before,
+        [type="checkbox"]:not(:checked) + label:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 18px;
+            height: 18px;
+            border: 1px solid #ddd;
+            background: #fff;
+        }
+        [type="checkbox"]:checked + label:after,
+        [type="checkbox"]:not(:checked) + label:after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: #00a69c;
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            -webkit-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+        }
+        [type="checkbox"]:not(:checked) + label:after {
+            opacity: 0;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+        }
+        [type="checkbox"]:checked + label:after {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        } */
+/* --Fin-- */
+
+
+/* Snackbar */
+   #snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    bottom: 30px;
+    font-size: 17px;
+    border-radius: 5px;
+    }
+    @media only screen and (min-width:600px){
+        #snackbar{left:32%; right:25%;}
+    }
+    @media only screen and (max-width:600px){
+        #snackbar{left:30%; right:0%;}
+        .pull-right{float:none!important;}
+    }
+
+    #snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 3.5s;
+    animation: fadein 0.5s, fadeout 0.5s 3.5s;
+    }
+
+    @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+    }
+
+    @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+    }
+
+    @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+    }
+
+    @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+    }
+
